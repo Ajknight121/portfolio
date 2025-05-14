@@ -1,14 +1,53 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <nav className="navbar navbar-expand-sm fixed-top" data-bs-theme="dark">
+      <Navbar expand="lg" fixed="top" className="navbar">
+        <Container fluid>
+          {/* <Navbar.Brand href="#">Navbar scroll</Navbar.Brand> */}
+          <Navbar.Toggle aria-controls="navbarScroll" />
+          <Navbar.Collapse id="navbarScroll">
+            <Nav
+              className="me-auto my-2 my-lg-0"
+              style={{ maxHeight: "100px" }}
+              navbarScroll
+            >
+              <Nav.Link className="navbar-link" href="#mission-target">
+                Mission
+              </Nav.Link>
+              <Nav.Link className="navbar-link" href="#skills-target">
+                Skills
+              </Nav.Link>
+              <Nav.Link className="navbar-link" href="#projects-target">
+                Projects
+              </Nav.Link>
+              <Nav.Link className="navbar-link" href="#contact-target">
+                Contact
+              </Nav.Link>
+              {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action4">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action5">
+                Something else here
+              </NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link href="#" disabled>
+              Link
+            </Nav.Link> */}
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+      {/* <nav className="navbar navbar-expand-sm fixed-top" data-bs-theme="dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             <i className="bi bi-rewind-btn-fill"></i>
@@ -42,13 +81,13 @@ function App() {
             </div>
           </div>
         </div>
-      </nav>
+      </nav> */}
 
       {/* <!-- Hero section --> */}
       <section id="hero-section">
         <div className="hero-content">
           <div className="container hero">
-            <img className="hero-img" src="/img/Knight_Adrian.jpg" />
+            <img className="hero-img" src="/img/knight_adrian.jpg" />
             <h1>Adrian O. Knight</h1>
             <h6>More than an A.O.K. developer</h6>
           </div>
@@ -92,11 +131,11 @@ function App() {
               </p>
             </div>
             <div className="skill col-sm-12 col-md-6 col-lg-3">
-              <img className="img-thumbnail" src="/img/CSS-Logo.png" />
+              <img className="img-thumbnail" src="/img/css-logo.png" />
               <p>Adding beautiful style to websites</p>
             </div>
             <div className="skill col-sm-12 col-md-6 col-lg-3">
-              <img className="img-thumbnail" src="/img/Bootstrap-logo.png" />
+              <img className="img-thumbnail" src="/img/bootstrap-logo.png" />
               <p>Premade styling for fast mobile responsive web development</p>
             </div>
             <div className="skill col-sm-12 col-md-6 col-lg-3">
@@ -109,7 +148,7 @@ function App() {
           </div>
         </section>
 
-        <section id="meme-section">
+        {/* <section id="meme-section">
           <h4>Meme Wallpapers</h4>
           <div id="carousel" className="carousel slide" data-bs-ride="none">
             <div className="carousel-indicators">
@@ -212,7 +251,7 @@ function App() {
               <span className="visually-hidden">Next</span>
             </button>
           </div>
-        </section>
+        </section> */}
 
         {/* <!-- Contact Section --> */}
         <div id="contact-target"></div>
@@ -223,16 +262,16 @@ function App() {
               className="col-sm-12 col-md"
               href="https://www.linkedin.com/in/adrian-o-knight/"
             >
-              <i className="bi bi-linkedin"></i>
+              <FaLinkedin />
             </a>
             <a
               className="col-sm-12 col-md"
               href="https://github.com/Ajknight121"
             >
-              <i className="bi bi-github"></i>
+              <FaGithub  />
             </a>
             <a className="col-sm-12 col-md" href="aoknight64@gmail.com">
-              <i className="bi bi-envelope-at-fill"></i>
+              <FaEnvelope />
             </a>
           </div>
         </section>

@@ -1,0 +1,204 @@
+/* You can add custom CSS and extend Boostrap styles in this file. Remember, Bootstrap is just CSS at the end of the day! */
+
+.scroll-top .navbar {
+  background-color: transparent;
+}
+
+#mission-target,
+#skills-target,
+#contact-target {
+  position: relative;
+  top: -80px;
+}
+
+.navbar {
+  display: block;
+  background-color: #5e51ec;
+  width: 100%;
+}
+
+.navbar-collapse {
+  background: transparent;
+}
+
+.navbar-nav {
+  float: right;
+  padding: 10px 10px 10px 10px;
+  text-align: right;
+  /* background-color: #5e51ec; */
+}
+
+#root {
+  position: relative;
+  background-color: #5e51ec;
+  color: white;
+}
+
+.bi {
+  font-size: xx-large;
+  color: #fff942;
+}
+
+.navbar-link {
+  font-weight: 600 !important;
+  color: #fff942 !important;
+}
+.navbar-link:hover {
+  font-weight: 600 !important;
+  color: white !important;
+}
+
+.active {
+  font-weight: bold;
+  color: #ffdd00;
+}
+
+img {
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+  /* margin-bottom: 0px; */
+  top: 0px;
+}
+
+.container.hero > h1 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+.container.hero > h6 {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+.hero-img {
+  border-radius: 100%;
+  width: clamp(120px, 20vw, 200px);
+  height: clamp(120px, 20vw, 200px);
+  border: 7px solid gold;
+  overflow: hidden;
+  margin: auto;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+
+#hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/img/arrow\ swarm\ trails.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 350px;
+  color: white;
+  margin: 0;
+}
+
+.page-content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+section {
+  margin: 20px auto;
+  text-align: center;
+}
+
+section > h4 {
+  margin-bottom: 20px;
+  border-bottom: solid 5px #01b2ff;
+  width: 200px;
+  padding-bottom: 8px;
+  margin: 0 auto 30px auto;
+}
+
+#mission-section {
+  /* height: 50px; */
+}
+
+#skills-section {
+  /* height: 50px; */
+}
+
+#contact-section {
+  /* height: 50px; */
+}
+
+#footer-section {
+  background-color: #a7349e;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  margin: -10px;
+}
+
+.skills {
+  margin: 0 80px;
+}
+
+.skill {
+  padding: 0 20px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.skill > img {
+  height: 200px;
+  object-fit: contain;
+}
+
+.skill > p {
+  font-size: larger;
+  margin-top: 10px;
+}
+
+.contact {
+  /* height: 100px; */
+  font-size: 50px;
+}
+
+.contact > a {
+  font-size: 50px;
+  /* margin: 0 20px; */
+}
+
+.contact > a > i:hover {
+  color: #ffa639;
+}
+
+#meme-section {
+  width: 90%;
+}
+
+.carousel {
+  width: 100%;
+}
+
+.carousel-item {
+  height: 300px;
+  width: 100%;
+}
+
+.carousel-item > img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+  margin: auto;
+}
+
+.carousel-caption {
+  background-color: rgb(0, 0, 0, 0.4);
+  padding: 0;
+}
