@@ -110,9 +110,12 @@ function App() {
             </div>
             <div className="col-sm">
               <p>
-                I'm a Computer Science major at University of Illinois at
-                Chicago (UIC). I enjoy doing web development and I am trying to
-                become a full stack developer
+                I'm a master's student in Computer Science at University of
+                Illinois at Chicago (UIC)!
+              </p>
+              <p>
+                I'm a software engineer and web developer of mobile responsive
+                and interactive website!
               </p>
             </div>
           </div>
@@ -145,6 +148,111 @@ function App() {
                 guards in place.
               </p>
             </div>
+          </div>
+        </section>
+
+        <div id="projects-target"></div>
+        <section id="projects-section">
+          <h4 className="text-center">Projects</h4>
+          <div className="projects">
+            <div className="project flex-row">
+              <img
+                className="project-img"
+                src="/img/Idle-Fire-Trailer-optimize.gif"
+              />
+              <div className="project-desc">
+                <h4>
+                  <a
+                    href="https://idle-fire.aokspace.com"
+                    className="project-title"
+                    target="blank"
+                  >
+                    Idle Fire
+                  </a>
+                </h4>
+                Idle Fire is a incremental clicker game
+                <div>
+                  <p>
+                    Idle Fire is a clicker game where the aim of the game is to
+                    click to create embers and to use those embers to purchase
+                    upgrades that help make more embers by either producing
+                    embers automatically or increasing the amount of embers you
+                    make when you click. Watch out for firemen they want to
+                    spoil the fun and slow the growth of your fire.
+                  </p>
+
+                  <p>
+                    This project was coded in Reactjs and Typescript and uses
+                    React's useReducer to follow the Redux design pattern. A
+                    factory design pattern is used for managing the game's
+                    upgrades.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="project flex-row">
+              <img
+                className="project-img"
+                src="/img/Idle-Fire-Trailer-optimize.gif"
+              />
+              <div className="project-desc">
+                <h4>ACM Jukebox</h4>
+                Shared queue youtube music player
+                <div className="project-desc">
+                  <p></p>
+
+                  <p>This project was coded in Reactjs and JavaScript</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="project flex-row">
+              <img
+                className="project-img"
+                src="/img/Idle-Fire-Trailer-optimize.gif"
+              />
+              <div className="project-desc">
+                <h4>Space Explorer</h4>
+                Travel between planets with data collected from NASA
+                <div className="project-desc">
+                  <p></p>
+                  <p>This project was coded in Reactjs and TypeScript</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="project flex-row">
+              <img
+                className="project-img"
+                src="/img/Idle-Fire-Trailer-optimize.gif"
+              />
+              <div className="project-desc">
+                <h4>ACM Marketplace</h4>
+                Next.js Storefront for ACM@UIC student org
+                <div className="project-desc">
+                  <p></p>
+                  <p>This project was coded in Next.js</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="project flex-row">
+              <img
+                className="project-img"
+                src="/img/Idle-Fire-Trailer-optimize.gif"
+              />
+              <div className="project-desc">
+                <h4>SanctuaryOS Recreation</h4>
+                Interactive recreation of SanctuaryOS music video
+                <div className="project-desc">
+                  <p></p>
+                  <p>This project was coded in React.js and Typescript</p>
+                </div>
+              </div>
+            </div>
+
+
           </div>
         </section>
 
@@ -268,7 +376,7 @@ function App() {
               className="col-sm-12 col-md"
               href="https://github.com/Ajknight121"
             >
-              <FaGithub  />
+              <FaGithub />
             </a>
             <a className="col-sm-12 col-md" href="aoknight64@gmail.com">
               <FaEnvelope />
