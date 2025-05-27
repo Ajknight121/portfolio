@@ -151,6 +151,7 @@ function App() {
           </div>
         </section>
 
+        {/* <!-- Projects section --> */}
         <div id="projects-target"></div>
         <section id="projects-section">
           <h4 className="text-center">Projects</h4>
@@ -194,7 +195,38 @@ function App() {
             <div className="project flex-row">
               <img
                 className="project-img"
-                src="/img/Idle-Fire-Trailer-optimize.gif"
+                src="/img/SanctuaryOS-trailer-optimize.gif"
+              />
+              <div className="project-desc">
+                <h4>SanctuaryOS Recreation</h4>
+                Interactive recreation of SanctuaryOS music video
+                <div className="project-desc">
+                  <p></p>
+                  <p>This project was coded in React.js and Typescript</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="project flex-row">
+              <img
+                className="project-img"
+                src="/img/3DBattleship-trailer-optimize.gif"
+              />
+              <div className="project-desc">
+                <h4>Dreadnought</h4>
+                3D battleship for up to 8 players
+                <div className="project-desc">
+                  <p></p>
+
+                  <p>This project was coded in Reactjs and typescript</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="project flex-row">
+              <img
+                className="project-img"
+                src="/img/acm-jukebox.png"
               />
               <div className="project-desc">
                 <h4>ACM Jukebox</h4>
@@ -210,10 +242,10 @@ function App() {
             <div className="project flex-row">
               <img
                 className="project-img"
-                src="/img/Idle-Fire-Trailer-optimize.gif"
+                src="/img/space-exploration.PNG"
               />
               <div className="project-desc">
-                <h4>Space Explorer</h4>
+                <h4>Space Exploration Game</h4>
                 Travel between planets with data collected from NASA
                 <div className="project-desc">
                   <p></p>
@@ -225,7 +257,7 @@ function App() {
             <div className="project flex-row">
               <img
                 className="project-img"
-                src="/img/Idle-Fire-Trailer-optimize.gif"
+                src="/img/acm-marketplace-hero.png"
               />
               <div className="project-desc">
                 <h4>ACM Marketplace</h4>
@@ -237,20 +269,7 @@ function App() {
               </div>
             </div>
             
-            <div className="project flex-row">
-              <img
-                className="project-img"
-                src="/img/Idle-Fire-Trailer-optimize.gif"
-              />
-              <div className="project-desc">
-                <h4>SanctuaryOS Recreation</h4>
-                Interactive recreation of SanctuaryOS music video
-                <div className="project-desc">
-                  <p></p>
-                  <p>This project was coded in React.js and Typescript</p>
-                </div>
-              </div>
-            </div>
+            
 
 
           </div>
