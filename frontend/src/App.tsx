@@ -4,11 +4,30 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import "./App.css";
+import { useState, useEffect } from "react";
 
 function App() {
+  const [isTop, setIsTop] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setIsTop(false);
+      } else {
+        setIsTop(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <Navbar expand="lg" fixed="top" className="navbar">
+      <Navbar expand="lg" fixed="top" className={`navbar ${isTop ? 'transparent-bg' : ''}`}>
         <Container fluid>
           {/* <Navbar.Brand href="#">Navbar scroll</Navbar.Brand> */}
           <Navbar.Toggle aria-controls="navbarScroll" />
@@ -148,6 +167,12 @@ function App() {
                 guards in place.
               </p>
             </div>
+            <div className="skill col-sm-12 col-md-6 col-lg-3">
+              {/* <img className="img-thumbnail" src="/img/typescript-logo.png" /> */}
+              <p>
+                Node.js, JavaScript/Typscript for the server side
+              </p>
+            </div>
           </div>
         </section>
 
@@ -198,7 +223,13 @@ function App() {
                 src="/img/SanctuaryOS-trailer-optimize.gif"
               />
               <div className="project-desc">
-                <h4>SanctuaryOS Recreation</h4>
+                <a
+                  href="https://sanctuaryoslive.aokspace.com"
+                  className="project-title"
+                  target="blank"
+                >
+                  <h4>SanctuaryOS Recreation</h4>
+                </a>
                 Interactive recreation of SanctuaryOS music video
                 <div className="project-desc">
                   <p></p>
@@ -218,32 +249,44 @@ function App() {
                 <div className="project-desc">
                   <p></p>
 
-                  <p>This project was coded in Reactjs and typescript</p>
+                  <p>This project was coded in Reactjs, nodejs, and typescript</p>
                 </div>
               </div>
             </div>
 
             <div className="project flex-row">
-              <img
-                className="project-img"
-                src="/img/acm-jukebox.png"
-              />
+              <img className="project-img" src="/img/acm-jukebox.png" />
               <div className="project-desc">
                 <h4>ACM Jukebox</h4>
                 Shared queue youtube music player
                 <div className="project-desc">
                   <p></p>
 
-                  <p>This project was coded in Reactjs and JavaScript</p>
+                  <p>This project was coded in Reactjs, nodejs, and JavaScript</p>
                 </div>
               </div>
             </div>
 
             <div className="project flex-row">
-              <img
-                className="project-img"
-                src="/img/space-exploration.PNG"
+              <video
+                className="project-video project-img"
+                src="/img/Storybookie-Demo.mp4"
+                controls
+                preload="auto"
               />
+
+              <div className="project-desc">
+                <h4>Storybookie</h4>
+                AI integrated story & drawing panels website
+                <div className="project-desc">
+                  <p></p>
+                  <p>This project was coded in Reactjs, nodejs, and TypeScript</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="project flex-row">
+              <img className="project-img" src="/img/space-exploration.PNG" />
               <div className="project-desc">
                 <h4>Space Exploration Game</h4>
                 Travel between planets with data collected from NASA
@@ -253,7 +296,7 @@ function App() {
                 </div>
               </div>
             </div>
-            
+
             <div className="project flex-row">
               <img
                 className="project-img"
@@ -268,10 +311,6 @@ function App() {
                 </div>
               </div>
             </div>
-            
-            
-
-
           </div>
         </section>
 

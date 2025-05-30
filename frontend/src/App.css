@@ -1,5 +1,9 @@
 /* You can add custom CSS and extend Boostrap styles in this file. Remember, Bootstrap is just CSS at the end of the day! */
 
+.transparent-bg {
+  background: transparent !important;
+}
+
 .scroll-top .navbar {
   background-color: transparent;
 }
