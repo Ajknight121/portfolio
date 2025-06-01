@@ -436,7 +436,7 @@ function App() {
             >
               <FaGithub />
             </a>
-            <a className="col-sm-12 col-md" href="aoknight64@gmail.com">
+            <a className="col-sm-12 col-md" href="mailto:aoknight64@gmail.com">
               <FaEnvelope />
             </a>
           </div>
