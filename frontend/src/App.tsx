@@ -284,6 +284,24 @@ function App() {
                 </div>
               </div>
             </div>
+            
+            <div className="project flex-row">
+              <video
+                className="project-video project-img"
+                src="/img/CONVERGEHEALTH-mobile.mp4"
+                controls
+                preload="auto"
+              />
+
+              <div className="project-desc">
+                <h4>CONVERGEHEALTH</h4>
+                Info site for a planned health conference
+                <div className="project-desc">
+                  <p></p>
+                  <p>This project was created with Reactjs</p>
+                </div>
+              </div>
+            </div>
 
             <div className="project flex-row">
               <img className="project-img" src="/img/space-exploration.PNG" />
