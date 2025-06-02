@@ -38,11 +38,11 @@ function App() {
               navbarScroll
             >
               <Nav.Link className="navbar-link" href="#mission-target">
-                Mission
+                About
               </Nav.Link>
-              <Nav.Link className="navbar-link" href="#skills-target">
+              {/* <Nav.Link className="navbar-link" href="#skills-target">
                 Skills
-              </Nav.Link>
+              </Nav.Link> */}
               <Nav.Link className="navbar-link" href="#projects-target">
                 Projects
               </Nav.Link>
@@ -122,7 +122,7 @@ function App() {
         {/* <!-- Mission/Meet-me section --> */}
         <div id="mission-target"></div>
         <section id="mission-section" className="text-center">
-          <h4>Mission</h4>
+          <h4>About</h4>
           <div className="container row">
             <div className="col-sm">
               <img src="/img/chicago-il-skyline-night.jpg" />
@@ -136,12 +136,13 @@ function App() {
                 I'm a software engineer and web developer of mobile responsive
                 and interactive website!
               </p>
+              <p>Programming Languages: TypeScript, JavaScript, React, Node.js, Express, SQL, HTML, CSS, Next.js, Python, Java, C/C++, Agile</p>
             </div>
           </div>
         </section>
 
         {/* <!-- Skills section --> */}
-        <div id="skills-target"></div>
+        {/* <div id="skills-target"></div>
         <section id="skills-section">
           <h4 className="text-center">Skills</h4>
           <div className="skills row">
@@ -168,13 +169,12 @@ function App() {
               </p>
             </div>
             <div className="skill col-sm-12 col-md-6 col-lg-3">
-              {/* <img className="img-thumbnail" src="/img/typescript-logo.png" /> */}
               <p>
                 Node.js, JavaScript/Typscript for the server side
               </p>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* <!-- Projects section --> */}
         <div id="projects-target"></div>
@@ -464,15 +464,6 @@ function App() {
         <section id="footer-section">© Adrian Knight 2024</section>
       </div>
 
-      {/* <!-- 
-  		TODO: Paste Bootstrap JavaScript script tag from:
-      https://getbootstrap.com/
-  	--> */}
-      {/* <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script> */}
     </>
   );
 }
