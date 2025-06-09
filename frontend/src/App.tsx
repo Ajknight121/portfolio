@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [isTop, setIsTop] = useState(true);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,10 +19,16 @@ function App() {
       }
     };
 
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -179,9 +186,9 @@ function App() {
         {/* <!-- Projects section --> */}
         <div id="projects-target"></div>
         <section id="projects-section">
-          <h4 className="text-center">Projects</h4>
+          <h4 className="text-center">Project Short List</h4>
           <div className="projects">
-            <div className="project flex-row">
+            <div className="project">
               <img
                 className="project-img"
                 src="/img/Idle-Fire-Trailer-optimize.gif"
@@ -217,7 +224,7 @@ function App() {
               </div>
             </div>
 
-            <div className="project flex-row">
+            <div className="project">
               <img
                 className="project-img"
                 src="/img/SanctuaryOS-trailer-optimize.gif"
@@ -238,7 +245,7 @@ function App() {
               </div>
             </div>
 
-            <div className="project flex-row">
+            <div className="project">
               <img
                 className="project-img"
                 src="/img/3DBattleship-trailer-optimize.gif"
@@ -254,7 +261,7 @@ function App() {
               </div>
             </div>
 
-            <div className="project flex-row">
+            <div className="project">
               <img className="project-img" src="/img/acm-jukebox.png" />
               <div className="project-desc">
                 <h4>ACM Jukebox</h4>
@@ -267,7 +274,7 @@ function App() {
               </div>
             </div>
 
-            <div className="project flex-row">
+            <div className="project">
               <video
                 className="project-video project-img"
                 src="/img/Storybookie-Demo.mp4"
@@ -285,7 +292,7 @@ function App() {
               </div>
             </div>
             
-            <div className="project flex-row">
+            <div className="project">
               <video
                 className="project-video project-img"
                 src="/img/CONVERGEHEALTH-mobile.mp4"
@@ -303,7 +310,7 @@ function App() {
               </div>
             </div>
 
-            <div className="project flex-row">
+            <div className="project">
               <img className="project-img" src="/img/space-exploration.PNG" />
               <div className="project-desc">
                 <h4>Space Exploration Game</h4>
@@ -315,7 +322,7 @@ function App() {
               </div>
             </div>
 
-            <div className="project flex-row">
+            <div className="project">
               <img
                 className="project-img"
                 src="/img/acm-marketplace-hero.png"
