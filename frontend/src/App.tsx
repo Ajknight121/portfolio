@@ -34,16 +34,12 @@ function App() {
 
   return (
     <>
-      <Navbar expand="lg" fixed="top" className={`navbar ${isTop ? 'transparent-bg' : ''}`}>
+      <Navbar expand="lg" fixed="top" className={`navbar ${isTop ? "transparent-bg" : ""}`}>
         <Container fluid>
           {/* <Navbar.Brand href="#">Navbar scroll</Navbar.Brand> */}
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
-            <Nav
-              className="me-auto my-2 my-lg-0"
-              style={{ maxHeight: "100px" }}
-              navbarScroll
-            >
+            <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: "100px" }} navbarScroll>
               <Nav.Link className="navbar-link" href="#mission-target">
                 About
               </Nav.Link>
@@ -136,14 +132,17 @@ function App() {
             </div>
             <div className="col-sm">
               <p>
-                I'm a master's student in Computer Science at University of
-                Illinois at Chicago (UIC)!
+                I'm a master's student in Computer Science at University of Illinois at Chicago
+                (UIC)!
               </p>
               <p>
-                I'm a software engineer and web developer of mobile responsive
-                and interactive website!
+                I'm a software engineer and web developer of mobile responsive and interactive
+                website!
               </p>
-              <p>Programming Languages: TypeScript, JavaScript, React, Node.js, Express, SQL, HTML, CSS, Next.js, Python, Java, C/C++, Agile</p>
+              <p>
+                Programming Languages: TypeScript, JavaScript, React, Node.js, Express, SQL, HTML,
+                CSS, Next.js, Python, Java, C/C++, Agile
+              </p>
             </div>
           </div>
         </section>
@@ -193,32 +192,24 @@ function App() {
                 className="project-img"
                 src="/img/Idle-Fire-Trailer-optimize.gif"
               />
-              <div className="project-desc">
-                <h4>
-                  <a
-                    href="https://idle-fire.aokspace.com"
-                    className="project-title"
-                    target="blank"
-                  >
-                    Idle Fire
-                  </a>
-                </h4>
+              <div className="project-desc-section">
+                <a href="https://idle-fire.aokspace.com" className="project-title" target="blank">
+                  <h4>Idle Fire</h4>
+                </a>
                 Idle Fire is a incremental clicker game
                 <div>
                   <p>
-                    Idle Fire is a clicker game where the aim of the game is to
-                    click to create embers and to use those embers to purchase
-                    upgrades that help make more embers by either producing
-                    embers automatically or increasing the amount of embers you
-                    make when you click. Watch out for firemen they want to
-                    spoil the fun and slow the growth of your fire.
+                    Idle Fire is a clicker game where the aim of the game is to click to create
+                    embers and to use those embers to purchase upgrades that help make more embers
+                    by either producing embers automatically or increasing the amount of embers you
+                    make when you click. Watch out for firemen they want to spoil the fun and slow
+                    the growth of your fire.
                   </p>
 
                   <p>
-                    This project was coded in Reactjs and Typescript and uses
-                    React's useReducer to follow the Redux design pattern. A
-                    factory design pattern is used for managing the game's
-                    upgrades.
+                    This project was coded in Reactjs and Typescript and uses React's useReducer to
+                    follow the Redux design pattern. A factory design pattern is used for managing
+                    the game's upgrades.
                   </p>
                 </div>
               </div>
@@ -229,7 +220,7 @@ function App() {
                 className="project-img"
                 src="/img/SanctuaryOS-trailer-optimize.gif"
               />
-              <div className="project-desc">
+              <div className="project-desc-section">
                 <a
                   href="https://sanctuaryoslive.aokspace.com"
                   className="project-title"
@@ -248,9 +239,25 @@ function App() {
             <div className="project">
               <img
                 className="project-img"
+                src="/img/sparkhacks-trailer.gif"
+              />
+              <div className="project-desc-section">
+                <h4>Sparkhacks 2025</h4>
+                UIC's student orgainized annual hackathon homepage
+                <div className="project-desc">
+                  <p></p>
+
+                  <p>This project was developed with Astro and React</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="project">
+              <img
+                className="project-img"
                 src="/img/3DBattleship-trailer-optimize.gif"
               />
-              <div className="project-desc">
+              <div className="project-desc-section">
                 <h4>Dreadnought</h4>
                 3D battleship for up to 8 players
                 <div className="project-desc">
@@ -263,7 +270,7 @@ function App() {
 
             <div className="project">
               <img className="project-img" src="/img/acm-jukebox.png" />
-              <div className="project-desc">
+              <div className="project-desc-section">
                 <h4>ACM Jukebox</h4>
                 Shared queue youtube music player
                 <div className="project-desc">
@@ -282,7 +289,7 @@ function App() {
                 preload="auto"
               />
 
-              <div className="project-desc">
+              <div className="project-desc-section">
                 <h4>Storybookie</h4>
                 AI integrated story & drawing panels website
                 <div className="project-desc">
@@ -300,7 +307,7 @@ function App() {
                 preload="auto"
               />
 
-              <div className="project-desc">
+              <div className="project-desc-section">
                 <h4>CONVERGEHEALTH</h4>
                 Info site for a planned health conference
                 <div className="project-desc">
@@ -312,7 +319,7 @@ function App() {
 
             <div className="project">
               <img className="project-img" src="/img/space-exploration.PNG" />
-              <div className="project-desc">
+              <div className="project-desc-section">
                 <h4>Space Exploration Game</h4>
                 Travel between planets with data collected from NASA
                 <div className="project-desc">
@@ -327,12 +334,23 @@ function App() {
                 className="project-img"
                 src="/img/acm-marketplace-hero.png"
               />
-              <div className="project-desc">
+              <div className="project-desc-section">
                 <h4>ACM Marketplace</h4>
                 Next.js Storefront for ACM@UIC student org
                 <div className="project-desc">
                   <p></p>
                   <p>This project was coded in Next.js</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="project flex-row">
+              <div className="project-desc-section">
+                <h4>More projects and descriptions to be listed</h4>
+
+                <div className="project-desc">
+                  <p></p>
+                  <p></p>
                 </div>
               </div>
             </div>
@@ -449,16 +467,10 @@ function App() {
         <section id="contact-section">
           <h4>Contact me</h4>
           <div className="contact row">
-            <a
-              className="col-sm-12 col-md"
-              href="https://www.linkedin.com/in/adrian-o-knight/"
-            >
+            <a className="col-sm-12 col-md" href="https://www.linkedin.com/in/adrian-o-knight/">
               <FaLinkedin />
             </a>
-            <a
-              className="col-sm-12 col-md"
-              href="https://github.com/Ajknight121"
-            >
+            <a className="col-sm-12 col-md" href="https://github.com/Ajknight121">
               <FaGithub />
             </a>
             <a className="col-sm-12 col-md" href="mailto:aoknight64@gmail.com">
@@ -470,7 +482,6 @@ function App() {
         {/* <!-- Footer section --> */}
         <section id="footer-section">© Adrian Knight 2024</section>
       </div>
-
     </>
   );
 }
