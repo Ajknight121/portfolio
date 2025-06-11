@@ -345,13 +345,8 @@ function App() {
             </div>
 
             <div className="project flex-row">
-              <div className="project-desc-section">
-                <h4>More projects and descriptions to be listed</h4>
-
-                <div className="project-desc">
-                  <p></p>
-                  <p></p>
-                </div>
+              <div className="notice">
+                More projects and descriptions to be added
               </div>
             </div>
           </div>
