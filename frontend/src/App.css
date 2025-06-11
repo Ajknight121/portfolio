@@ -261,9 +261,13 @@ section > h4 {
   padding: 20px;
   min-width: 40%;
   background-color: white;
+  border-radius: 0 15px 15px 0;
 }
 
 @media (max-width: 768px) {
+  .project-desc-section {
+    border-radius: 0 0 15px 15px;
+  }
   .project-img {
     height: 100%;
     width: auto;
