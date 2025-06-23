@@ -5,6 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import "./App.css";
 import { useState, useEffect } from "react";
+import Github from "./components/Github";
 
 function App() {
   const [isTop, setIsTop] = useState(true);
@@ -23,12 +24,12 @@ function App() {
       setIsMobile(window.innerWidth <= 768);
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -126,7 +127,7 @@ function App() {
         <div id="mission-target"></div>
         <section id="mission-section" className="text-center">
           <h4>About</h4>
-          <div className="container row">
+          <div className="container row text-left">
             <div className="col-sm">
               <img src="/img/chicago-il-skyline-night.jpg" />
             </div>
@@ -140,9 +141,9 @@ function App() {
                 website!
               </p>
               <p>
-                Programming Languages: TypeScript, JavaScript, React, Node.js, Express, SQL, HTML,
-                CSS, Next.js, Python, Java, C/C++, Agile
+                Programming Languages: TypeScript, Java, Python, C#, JavaScript, C++, SQL, HTML, CSS
               </p>
+              <p>Frameworks: React, Node.js, Express.js, Next.js, Unity, Agile, git</p>
             </div>
           </div>
         </section>
@@ -188,10 +189,7 @@ function App() {
           <h4 className="text-center">Project Short List</h4>
           <div className="projects">
             <div className="project">
-              <img
-                className="project-img"
-                src="/img/Idle-Fire-Trailer-optimize.gif"
-              />
+              <img className="project-img" src="/img/Idle-Fire-Trailer-optimize.gif" />
               <div className="project-desc-section">
                 <a href="https://idle-fire.aokspace.com" className="project-title" target="blank">
                   <h4>Idle Fire</h4>
@@ -216,10 +214,7 @@ function App() {
             </div>
 
             <div className="project">
-              <img
-                className="project-img"
-                src="/img/SanctuaryOS-trailer-optimize.gif"
-              />
+              <img className="project-img" src="/img/SanctuaryOS-trailer-optimize.gif" />
               <div className="project-desc-section">
                 <a
                   href="https://sanctuaryoslive.aokspace.com"
@@ -237,10 +232,7 @@ function App() {
             </div>
 
             <div className="project">
-              <img
-                className="project-img"
-                src="/img/sparkhacks-trailer.gif"
-              />
+              <img className="project-img" src="/img/sparkhacks-trailer.gif" />
               <div className="project-desc-section">
                 <h4>Sparkhacks 2025</h4>
                 UIC's student orgainized annual hackathon homepage
@@ -253,10 +245,7 @@ function App() {
             </div>
 
             <div className="project">
-              <img
-                className="project-img"
-                src="/img/3DBattleship-trailer-optimize.gif"
-              />
+              <img className="project-img" src="/img/3DBattleship-trailer-optimize.gif" />
               <div className="project-desc-section">
                 <h4>Dreadnought</h4>
                 3D battleship for up to 8 players
@@ -298,7 +287,7 @@ function App() {
                 </div>
               </div>
             </div>
-            
+
             <div className="project">
               <video
                 className="project-video project-img"
@@ -330,12 +319,11 @@ function App() {
             </div>
 
             <div className="project">
-              <img
-                className="project-img"
-                src="/img/acm-marketplace-hero.png"
-              />
+              <img className="project-img" src="/img/acm-marketplace-hero.png" />
               <div className="project-desc-section">
-                <h4>ACM Marketplace</h4>
+                <div className="flex-row justify-center">
+                  <h4>ACM Marketplace</h4> <Github link="https://github.com/acm-uic/marketplace" />
+                </div>
                 Next.js Storefront for ACM@UIC student org
                 <div className="project-desc">
                   <p></p>
@@ -345,9 +333,7 @@ function App() {
             </div>
 
             <div className="project flex-row">
-              <div className="notice">
-                More projects and descriptions to be added
-              </div>
+              <div className="notice">More projects and descriptions to be added</div>
             </div>
           </div>
         </section>

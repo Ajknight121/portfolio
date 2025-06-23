@@ -8,8 +8,16 @@
   background-color: transparent;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
 #mission-target,
-#skills-target,
+#projects-target,
 #contact-target {
   position: relative;
   top: -80px;
@@ -232,6 +240,12 @@ section > h4 {
   text-decoration: none;
 }
 
+.icon-link-small {
+  width: 20px;
+  height: 30px;
+  margin: 2px 4px;
+}
+
 .project {
   margin: 30px;
   position: relative;
@@ -262,6 +276,7 @@ section > h4 {
   min-width: 40%;
   background-color: white;
   border-radius: 0 15px 15px 0;
+  justify-content: center;
 }
 
 .notice {
