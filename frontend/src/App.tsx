@@ -9,7 +9,7 @@ import Github from "./components/Github";
 
 function App() {
   const [isTop, setIsTop] = useState(true);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  // const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,16 +20,16 @@ function App() {
       }
     };
 
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
+    // const handleResize = () => {
+    //   setIsMobile(window.innerWidth <= 768);
+    // };
 
-    window.addEventListener("resize", handleResize);
+    // window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
 
     return () => {
+      // window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
