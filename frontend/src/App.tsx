@@ -133,12 +133,12 @@ function App() {
             </div>
             <div className="col-sm">
               <p>
-                I'm a master's student in Computer Science at University of Illinois at Chicago
-                (UIC)!
+                I'm a master's student in Computer Science graduating from University of Illinois Chicago
+                (UIC) December 2025!
               </p>
               <p>
-                I'm a software engineer and web developer of mobile responsive and interactive
-                website!
+                I'm a software engineer and a web developer that makes screen responsive and interactive
+                websites!
               </p>
               <p>
                 Programming Languages: TypeScript, Java, Python, C#, JavaScript, C++, SQL, HTML, CSS
