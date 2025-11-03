@@ -4,6 +4,8 @@
   background: transparent !important;
 }
 
+
+
 .scroll-top .navbar {
   background-color: transparent;
 }
@@ -153,11 +155,28 @@ section > h4 {
 }
 
 #footer-section {
+  
   background-color: #a7349e;
   text-align: center;
   color: white;
   padding: 10px;
   margin: 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.footer-content > a {
+  color: #fff942 !important;
+}
+.footer-content > a:hover {
+  color: #ffdd00 !important;
 }
 
 .skills {
@@ -289,6 +308,9 @@ section > h4 {
 }
 
 @media (max-width: 768px) {
+  .small-hide {
+    display: none;
+  }
   .project-desc-section {
     border-radius: 0 0 15px 15px;
   }

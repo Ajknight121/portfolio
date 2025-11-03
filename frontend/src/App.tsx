@@ -50,9 +50,9 @@ function App() {
               <Nav.Link className="navbar-link" href="#projects-target">
                 Projects
               </Nav.Link>
-              <Nav.Link className="navbar-link" href="#contact-target">
+              {/* <Nav.Link className="navbar-link" href="#contact-target">
                 Contact
-              </Nav.Link>
+              </Nav.Link> */}
               {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
@@ -128,23 +128,39 @@ function App() {
         <section id="mission-section" className="text-center">
           <h4>About</h4>
           <div className="container row text-left">
-            <div className="col-sm">
+            <div className="col-sm small-hide">
               <img src="/img/chicago-il-skyline-night.jpg" />
             </div>
             <div className="col-sm">
+              <h3>Hey, I'm Adrian!</h3>
               <p>
-                I'm a master's student in Computer Science graduating from University of Illinois Chicago
-                (UIC) December 2025!
+                I'm a computer science master student currently doing Human Computer Interaction
+                research with a biomechanical team to support rehabilitation of speech.
               </p>
               <p>
-                I'm a software engineer and a web developer that makes screen responsive and interactive
-                websites!
+                I love sharing the power and fun of doing web development around my campus. I'm
+                always interested in helping making a web project more interactive and screen responsive!
+              </p>
+              <p>
+                I'm expecting to graduate from University of Illinois Chicago (UIC) with a masters
+                in computer science in December 2025!
               </p>
               <p>
                 Programming Languages: TypeScript, Java, Python, C#, JavaScript, C++, SQL, HTML, CSS
               </p>
               <p>Frameworks: React, Node.js, Express.js, Next.js, Unity, Agile, git</p>
             </div>
+          </div>
+          <div className="contact row">
+            <a className="col-sm-12 col-md" href="https://www.linkedin.com/in/adrian-o-knight/">
+              <FaLinkedin />
+            </a>
+            <a className="col-sm-12 col-md" href="https://github.com/Ajknight121">
+              <FaGithub />
+            </a>
+            {/* <a className="col-sm-12 col-md" href="mailto:aoknight64@gmail.com">
+              <FaEnvelope />
+            </a> */}
           </div>
         </section>
 
@@ -444,7 +460,7 @@ function App() {
         </section> */}
 
         {/* <!-- Contact Section --> */}
-        <div id="contact-target"></div>
+        {/* <div id="contact-target"></div>
         <section id="contact-section">
           <h4>Contact me</h4>
           <div className="contact row">
@@ -458,10 +474,22 @@ function App() {
               <FaEnvelope />
             </a>
           </div>
-        </section>
+        </section> */}
 
         {/* <!-- Footer section --> */}
-        <section id="footer-section">© Adrian Knight 2024</section>
+        <section id="footer-section">
+          <div className="footer-content">
+            <a className="" href="https://www.linkedin.com/in/adrian-o-knight/">
+              <FaLinkedin />
+              linkedin
+            </a>
+            © Adrian Knight 2024
+            <a className="" href="https://github.com/Ajknight121">
+              <FaGithub />
+              github
+            </a>
+          </div>
+        </section>
       </div>
     </>
   );
