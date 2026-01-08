@@ -1,0 +1,40 @@
+.project-title {
+  color: #a7349e;
+  text-decoration: none;
+  display: block;
+  width: fit-content;
+  margin-bottom: 0.5rem;
+  font-size: 1.6vw;
+  text-align: center;
+  width: 100%;
+}
+
+.project-title h4 {
+  display: inline;
+}
+
+.project-title::after {
+  content: "\2197";
+  margin-left: 5px;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.project-title:hover::after {
+  transform: translate(2px, -2px);
+}
+
+.project-img {
+  /* height: 100%; */
+  width: auto;
+  max-width: 65%;
+}
+
+.project-desc-section {
+  height: 100%;
+  padding: 20px;
+  min-width: 40%;
+  background-color: white;
+  border-radius: 0 15px 15px 0;
+  justify-content: center;
+}

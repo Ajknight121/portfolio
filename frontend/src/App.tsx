@@ -2,13 +2,24 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 // import NavDropdown from "react-bootstrap/NavDropdown";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaSun, FaMoon } from "react-icons/fa";
 import "./App.css";
+import "./project.css";
 import { useState, useEffect } from "react";
 import Github from "./components/Github";
 
 function App() {
   const [isTop, setIsTop] = useState(true);
+  const [theme, setTheme] = useState(() => {
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme) {
+      return storedTheme;
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  });
   // const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
@@ -33,6 +44,16 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+    console.log("wap", theme)
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
+
   return (
     <>
       <Navbar expand="lg" fixed="top" className={`navbar ${isTop ? "transparent-bg" : ""}`}>
@@ -40,7 +61,7 @@ function App() {
           {/* <Navbar.Brand href="#">Navbar scroll</Navbar.Brand> */}
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
-            <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: "100px" }} navbarScroll>
+            <Nav className="me-auto my-2 my-lg-0" style={{ }} navbarScroll>
               <Nav.Link className="navbar-link" href="#mission-target">
                 About
               </Nav.Link>
@@ -49,6 +70,9 @@ function App() {
               </Nav.Link> */}
               <Nav.Link className="navbar-link" href="#projects-target">
                 Projects
+              </Nav.Link>
+              <Nav.Link className="navbar-link" onClick={toggleTheme} style={{ cursor: "pointer" }}>
+                {theme === "light" ? <FaMoon /> : <FaSun />}
               </Nav.Link>
               {/* <Nav.Link className="navbar-link" href="#contact-target">
                 Contact
@@ -483,7 +507,7 @@ function App() {
               <FaLinkedin />
               linkedin
             </a>
-            © Adrian Knight 2024
+            © Adrian Knight
             <a className="" href="https://github.com/Ajknight121">
               <FaGithub />
               github

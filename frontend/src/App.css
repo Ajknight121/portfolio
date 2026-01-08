@@ -1,10 +1,88 @@
-/* You can add custom CSS and extend Boostrap styles in this file. Remember, Bootstrap is just CSS at the end of the day! */
+:root {
+  /* Full color Palette */
+  --trails-bg-purple: #5e51ec;
+  --trails-bg-maroon: #a7349e;
+  --trails-bg-cyan: #01fff2;
+  --trails-bg-blue: #01b2ff;
+  --trail-yellow: #fff942;
+  --trail-yellow-highlight: #ffdd00;
+  --trail-green: #6aff00;
+  --trail-orange: #ffa639;
+  --trail-dark-orange: #ff7139;
+  --trail-shadow: #18144b;
+}
+
+
+/* Custom css property allows transition to select property for animation */
+@property --grad-stop-1 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 50%;
+}
+
+@property --grad-stop-2 {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 60%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  }
+}
+
+[data-theme="light"] {
+  /* Color purpose grouped - Light */
+  --secondary-color: #f2bf5a;
+  --third-color: #e1e8c5;
+  --text-color-light: #ffffff;
+  --text-color-dark: #000000;
+  --background-color-light: var(--trails-bg-purple);
+  --background-color-dark: var(--trails-bg-maroon);
+  --background-color-darkest: var(--trail-shadow);
+  --border-color: var(--trails-bg-blue);
+  --button-hover-color: #ddd;
+  --alert-background: white;
+  --alert-text: black;
+
+  /* Final applied colors - Light */
+  --text-color: var(--text-color-light);
+  --link-color: var(--trail-yellow);
+  --background-color: var(--trails-bg-purple);
+  --ui-primary: var(--trails-bg-maroon);
+  --ui-secondary: var(--secondary-color);
+  --ui-third: var(--third-color);
+}
+
+[data-theme="dark"] {
+  /* Color purpose grouped - Dark */
+  --primary-color: #d0e8c5;
+  --secondary-color: #f2bf5a;
+  --third-color: #e1e8c5;
+  --text-color-light: #ffffff;
+  --text-color-dark: #000000;
+  --background-color-light: #c5d3e8;
+  --background-color-dark: #a6aebf;
+  --background-color-darkest: #393e4b;
+  --border-color: var(--trails-bg-blue);
+  --button-hover-color: #ddd;
+  --alert-background: var(--trail-orange);
+  --alert-text: black;
+
+  /* Final applied colors - Dark */
+  --text-color: var(--text-color-light);
+  --link-color: var(--trail-yellow);
+  --background-color: var(--trail-shadow);
+  --ui-primary: var(--trails-bg-maroon);
+  --ui-secondary: var(--secondary-color);
+  --ui-third: var(--third-color);
+
+
+}
 
 .transparent-bg {
   background: transparent !important;
 }
-
-
 
 .scroll-top .navbar {
   background-color: transparent;
@@ -17,6 +95,9 @@
 .text-left {
   text-align: left;
 }
+.text-center {
+  text-align: center;
+}
 
 #mission-target,
 #projects-target,
@@ -27,7 +108,7 @@
 
 .navbar {
   display: block;
-  background-color: #5e51ec;
+  background-color: var(--background-color);
   width: 100%;
 }
 
@@ -37,25 +118,29 @@
 
 .navbar-nav {
   float: right;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 20px 10px 10px;
   text-align: right;
-  /* background-color: #5e51ec; */
+  position: relative;
 }
 
 #root {
   position: relative;
-  background-color: #5e51ec;
-  color: white;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  min-height: 100vh;
 }
 
 .bi {
   font-size: xx-large;
-  color: #fff942;
+  color: var(--trail-yellow);
 }
 
 .navbar-link {
   font-weight: 600 !important;
-  color: #fff942 !important;
+  color: var(--trail-yellow) !important;
+  background-color: var(--trail-shadow) !important; 
+  padding: 10px !important;
 }
 .navbar-link:hover {
   font-weight: 600 !important;
@@ -64,7 +149,7 @@
 
 .active {
   font-weight: bold;
-  color: #ffdd00;
+  color: var(--trail-yellow-highlight);
 }
 
 img {
@@ -95,12 +180,27 @@ img {
 .hero-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
   height: 100%;
+  background: linear-gradient(0deg, var(--background-color) 0%, var(--background-color) 30%, var(--background-color) var(--grad-stop-1), transparent var(--grad-stop-2)), url("/img/arrow\ swarm\ trails.png") lightgray;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  transition: --grad-stop-1 0.5s ease, --grad-stop-2 0.5s ease;
+}
+
+[data-theme="light"] .hero-content {
+  --grad-stop-1: 60%;
+  --grad-stop-2: 100%;
+}
+
+[data-theme="dark"] .hero-content {
+  --grad-stop-1: 70%;
+  --grad-stop-2: 200%;
 }
 
 #hero-section {
@@ -112,8 +212,7 @@ img {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  height: 480px;
-  color: white;
+  height: 37vh;
   margin: 0;
 }
 
@@ -136,7 +235,7 @@ section {
 
 section > h4 {
   margin-bottom: 20px;
-  border-bottom: solid 5px #01b2ff;
+  border-bottom: solid 5px var(--border-color);
   width: 200px;
   padding-bottom: 8px;
   margin: 0 auto 30px auto;
@@ -155,10 +254,8 @@ section > h4 {
 }
 
 #footer-section {
-  
-  background-color: #a7349e;
+  background-color: var(--trails-bg-maroon);
   text-align: center;
-  color: white;
   padding: 10px;
   margin: 0;
 }
@@ -173,10 +270,10 @@ section > h4 {
 }
 
 .footer-content > a {
-  color: #fff942 !important;
+  color: var(--trail-yellow) !important;
 }
 .footer-content > a:hover {
-  color: #ffdd00 !important;
+  color: var(--trail-yellow-highlight) !important;
 }
 
 .skills {
@@ -205,13 +302,13 @@ section > h4 {
 }
 
 .contact > a {
-  color: #fff942;
+  color: var(--trail-yellow);
   font-size: 50px;
   /* margin: 0 20px; */
 }
 
 .contact > a:hover {
-  color: #ffa639;
+  color: var(--trail-dark-orange);
 }
 
 #meme-section {
@@ -255,10 +352,7 @@ section > h4 {
   flex-direction: column;
 }
 
-.project-title {
-  color: #a7349e;
-  text-decoration: none;
-}
+
 
 .icon-link-small {
   width: 20px;
@@ -280,36 +374,26 @@ section > h4 {
   font-size: clamp(10px, 1.5vw, 20px);
 }
 
-.project-title {
-  font-size: 1.6vw;
-}
 
-.project-img {
-  /* height: 100%; */
-  width: auto;
-  max-width: 65%;
-}
-
-.project-desc-section {
-  height: 100%;
-  padding: 20px;
-  min-width: 40%;
-  background-color: white;
-  border-radius: 0 15px 15px 0;
-  justify-content: center;
-}
 
 .notice {
-  background-color: white;
+  background-color: var(--alert-background);
+  color: var(--alert-text);
   padding: 20px;
   border-radius: 15px;
   font-weight: bold;
   font-size: larger;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) {  
   .small-hide {
     display: none;
+  }
+  .navbar-nav {
+    position: relative;
+    right: -20px;
+    top: -50px; 
+    text-align: "left"; 
   }
   .project-desc-section {
     border-radius: 0 0 15px 15px;
