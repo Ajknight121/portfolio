@@ -162,8 +162,8 @@ function App() {
                 research with a biomechanical team to support rehabilitation of speech.
               </p>
               <p>
-                I love sharing the power and fun of doing web development around my campus. I'm
-                always interested in helping making a web project more interactive and screen responsive!
+                I believe Web technology has matured a great deal, giving us the tools to create highly capable projects. I enjoy teaching web development and fostering collaboration on functional projects.
+                I'm particularly interested in interactive websites and making sure they have high usability across screen sizes.
               </p>
               <p>
                 I'm expecting to graduate from University of Illinois Chicago (UIC) with a masters
@@ -245,7 +245,7 @@ function App() {
                   </p>
 
                   <p>
-                    This project was coded in Reactjs and Typescript and uses React's useReducer to
+                    Coded in Reactjs and Typescript and uses React's useReducer to
                     follow the Redux design pattern. A factory design pattern is used for managing
                     the game's upgrades.
                   </p>
@@ -266,7 +266,7 @@ function App() {
                 Interactive recreation of SanctuaryOS music video
                 <div className="project-desc">
                   <p></p>
-                  <p>This project was coded in React.js and Typescript</p>
+                  <p>Developed in React.js and Typescript</p>
                 </div>
               </div>
             </div>
@@ -279,7 +279,7 @@ function App() {
                 <div className="project-desc">
                   <p></p>
 
-                  <p>This project was developed with Astro and React</p>
+                  <p>Collaborativly made with Astro and React</p>
                 </div>
               </div>
             </div>
@@ -292,7 +292,7 @@ function App() {
                 <div className="project-desc">
                   <p></p>
 
-                  <p>This project was coded in Reactjs, nodejs, and typescript</p>
+                  <p>Collaborativly developed with Reactjs, nodejs, and typescript</p>
                 </div>
               </div>
             </div>
@@ -305,7 +305,7 @@ function App() {
                 <div className="project-desc">
                   <p></p>
 
-                  <p>This project was coded in Reactjs, nodejs, and JavaScript</p>
+                  <p>Collaborativly developed with Reactjs, nodejs, and JavaScript</p>
                 </div>
               </div>
             </div>
@@ -323,7 +323,7 @@ function App() {
                 AI integrated story & drawing panels website
                 <div className="project-desc">
                   <p></p>
-                  <p>This project was coded in Reactjs, nodejs, and TypeScript</p>
+                  <p>Developed with Reactjs, nodejs, and TypeScript</p>
                 </div>
               </div>
             </div>
@@ -341,7 +341,7 @@ function App() {
                 Info site for a planned health conference
                 <div className="project-desc">
                   <p></p>
-                  <p>This project was created with Reactjs</p>
+                  <p>Created with Reactjs</p>
                 </div>
               </div>
             </div>
@@ -353,7 +353,7 @@ function App() {
                 Travel between planets with data collected from NASA
                 <div className="project-desc">
                   <p></p>
-                  <p>This project was coded in Reactjs and TypeScript</p>
+                  <p>Collaborativly developed with Reactjs and TypeScript</p>
                 </div>
               </div>
             </div>
@@ -367,7 +367,7 @@ function App() {
                 Next.js Storefront for ACM@UIC student org
                 <div className="project-desc">
                   <p></p>
-                  <p>This project was coded in Next.js</p>
+                  <p>Developed collaborativly with Next.js</p>
                 </div>
               </div>
             </div>
