@@ -1,3 +1,18 @@
+.project {
+  margin: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  color: black;
+  padding: 0 0 0 0;
+  max-width: 1200px;
+  width: 95%;
+  font-size: clamp(10px, 1.5vw, 20px);
+}
+
+
 .project-title {
   color: #a7349e;
   text-decoration: none;
@@ -37,4 +52,20 @@
   background-color: white;
   border-radius: 0 15px 15px 0;
   justify-content: center;
+}
+
+@media (max-width: 768px) {  
+  .project-desc-section {
+    border-radius: 0 0 15px 15px;
+  }
+  .project-img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+  }
+  .project {
+    flex-direction: column;
+    max-width: 100%;
+    height: fit-content;
+  }
 }

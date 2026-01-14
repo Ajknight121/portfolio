@@ -352,29 +352,11 @@ section > h4 {
   flex-direction: column;
 }
 
-
-
 .icon-link-small {
   width: 20px;
   height: 30px;
   margin: 2px 4px;
 }
-
-.project {
-  margin: 30px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: fit-content;
-  color: black;
-  padding: 0 0 0 0;
-  max-width: 1200px;
-  width: 95%;
-  font-size: clamp(10px, 1.5vw, 20px);
-}
-
-
 
 .notice {
   background-color: var(--alert-background);
@@ -394,18 +376,5 @@ section > h4 {
     right: -20px;
     top: -50px; 
     text-align: "left"; 
-  }
-  .project-desc-section {
-    border-radius: 0 0 15px 15px;
-  }
-  .project-img {
-    height: 100%;
-    width: auto;
-    max-width: 100%;
-  }
-  .project {
-    flex-direction: column;
-    max-width: 100%;
-    height: fit-content;
   }
 }
