@@ -294,7 +294,7 @@ function App() {
 
               <div className="project-desc-section">
                 <h4>XR Classroom</h4>
-                <p>A VR experience to showcase a possible future for students learning with XR resources.</p>
+                <p>A VR experience to showcase a possible future for students learning with XR resources to address the UN sustainable development goal of Quality Education</p>
                 <p>This was presented through UIC's CAVE 2 allowing viewers to also inhabit the space of the experience</p>
                 <div className="project-desc">
                   <p></p>
