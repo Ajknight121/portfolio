@@ -285,6 +285,25 @@ function App() {
             </div>
 
             <div className="project">
+              <video
+                className="project-video project-img"
+                src="/img/XR_Classroom_Video_Documentation.mp4"
+                controls
+                preload="auto"
+              />
+
+              <div className="project-desc-section">
+                <h4>XR Classroom</h4>
+                <p>A VR experience to showcase a possible future for students learning with XR resources.</p>
+                <p>This was presented through UIC's CAVE 2 allowing viewers to also inhabit the space of the experience</p>
+                <div className="project-desc">
+                  <p></p>
+                  <p>Crafted in Unity</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="project">
               <img className="project-img" src="/img/3DBattleship-trailer-optimize.gif" />
               <div className="project-desc-section">
                 <h4>Dreadnought</h4>
