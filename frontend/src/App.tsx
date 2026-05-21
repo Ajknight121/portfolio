@@ -10,6 +10,9 @@ import Github from "./components/Github";
 
 function App() {
   const [isTop, setIsTop] = useState(true);
+  const [currentPage, setCurrentPage] = useState<"home" | "resume">(() => {
+    return window.location.pathname === "/resume" ? "resume" : "home";
+  });
   const [theme, setTheme] = useState(() => {
     const storedTheme = localStorage.getItem("theme");
     if (storedTheme) {
@@ -47,11 +50,41 @@ function App() {
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
-    console.log("wap", theme)
+    // console.log("wap", theme)
   }, [theme]);
+
+  // Sync React state changes to the browser's URL
+  useEffect(() => {
+    const path = currentPage === "resume" ? "/resume" : "/";
+    if (window.location.pathname !== path) {
+      window.history.pushState(null, "", path);
+    }
+  }, [currentPage]);
+
+  // Handle browser back and forward buttons
+  useEffect(() => {
+    const handlePopState = () => {
+      setCurrentPage(window.location.pathname === "/resume" ? "resume" : "home");
+    };
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
+
+  const handleNavClick = (targetId: string) => {
+    if (currentPage !== "home") {
+      setCurrentPage("home");
+      // A slight delay allows the DOM to render the home page before scrolling to the target anchor
+      setTimeout(() => {
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
   };
 
   return (
@@ -62,14 +95,17 @@ function App() {
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav className="me-auto my-2 my-lg-0" style={{ }} navbarScroll>
-              <Nav.Link className="navbar-link" href="#mission-target">
+              <Nav.Link className="navbar-link" href="#mission-target" onClick={() => handleNavClick("mission-target")}>
                 About
               </Nav.Link>
               {/* <Nav.Link className="navbar-link" href="#skills-target">
                 Skills
               </Nav.Link> */}
-              <Nav.Link className="navbar-link" href="#projects-target">
+              <Nav.Link className="navbar-link" href="#projects-target" onClick={() => handleNavClick("projects-target")}>
                 Projects
+              </Nav.Link>
+              <Nav.Link className="navbar-link" onClick={() => setCurrentPage("resume")} style={{ cursor: "pointer" }}>
+                Resume
               </Nav.Link>
               <Nav.Link className="navbar-link" onClick={toggleTheme} style={{ cursor: "pointer" }}>
                 {theme === "light" ? <FaMoon /> : <FaSun />}
@@ -130,6 +166,8 @@ function App() {
         </div>
       </nav> */}
 
+      {currentPage === "home" ? (
+        <>
       {/* <!-- Hero section --> */}
       <section id="hero-section">
         <div className="hero-content">
@@ -175,14 +213,14 @@ function App() {
               <p>Frameworks: React, Node.js, Express.js, Next.js, Unity, Agile, git</p>
             </div>
           </div>
-          <div className="contact row">
-            <a className="col-sm-12 col-md" href="https://www.linkedin.com/in/adrian-o-knight/">
+          <div className="contact row justify-content-center gap-3">
+            <a className="col-auto" href="https://www.linkedin.com/in/adrian-o-knight/">
               <FaLinkedin />
             </a>
-            <a className="col-sm-12 col-md" href="https://github.com/Ajknight121">
+            <a className="col-auto" href="https://github.com/Ajknight121">
               <FaGithub />
             </a>
-            {/* <a className="col-sm-12 col-md" href="mailto:aoknight64@gmail.com">
+            {/* <a className="col-auto" href="mailto:aoknight64@gmail.com">Hello developer! I heard emails are out of style but if you want to reach me you can email me!
               <FaEnvelope />
             </a> */}
           </div>
@@ -228,6 +266,21 @@ function App() {
         <section id="projects-section">
           <h4 className="text-center">Project Short List</h4>
           <div className="projects">
+
+            <div className="project">
+              <img className="project-img" src="/img/acm-jukebox.png" />
+              <div className="project-desc-section">
+                <h4>WTSE Tongue Trackpad Interface</h4>
+                <h6>UIC Masters Thesis</h6>
+                <p>A </p>
+                <div className="project-desc">
+                  <p></p>
+
+                  <p>Development across vanialla HTML and JS to React and TypeScript</p>
+                </div>
+              </div>
+            </div>
+
             <div className="project">
               <img className="project-img" src="/img/Idle-Fire-Trailer-optimize.gif" />
               <div className="project-desc-section">
@@ -506,14 +559,14 @@ function App() {
         {/* <div id="contact-target"></div>
         <section id="contact-section">
           <h4>Contact me</h4>
-          <div className="contact row">
-            <a className="col-sm-12 col-md" href="https://www.linkedin.com/in/adrian-o-knight/">
+          <div className="contact row justify-content-center gap-3">
+            <a className="col-auto" href="https://www.linkedin.com/in/adrian-o-knight/">
               <FaLinkedin />
             </a>
-            <a className="col-sm-12 col-md" href="https://github.com/Ajknight121">
+            <a className="col-auto" href="https://github.com/Ajknight121">
               <FaGithub />
             </a>
-            <a className="col-sm-12 col-md" href="mailto:aoknight64@gmail.com">
+            <a className="col-auto" href="mailto:aoknight64@gmail.com">
               <FaEnvelope />
             </a>
           </div>
@@ -531,9 +584,32 @@ function App() {
               <FaGithub />
               github
             </a>
+            <a className="" style={{cursor:"pointer"}} onClick={() => setCurrentPage("resume")}>
+              Resume
+            </a>
           </div>
         </section>
       </div>
+        </>
+      ) : (
+        <div className="resume-page" style={{ height: "100vh", overflow: "hidden", display: "flex", flexDirection: "column" }}>
+          <section id="hero-section" style={{ height: "15vh", minHeight: "15vh", margin: 0 }}>
+            <div className="hero-content" style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <div className="container hero text-center" style={{ paddingTop: "2rem" }}>
+                <h1 style={{padding: 0}}>Adrian O. Knight</h1>
+                <button className="navbar-link" onClick={() => setCurrentPage("home")}>
+                  Back to Home
+                </button>
+              </div>
+            </div>
+          </section>
+          <iframe
+            src="/resume.pdf"
+            title="Adrian O. Knight Resume"
+            style={{ width: "100%", height: "85vh", border: "none" }}
+          />
+        </div>
+      )}
     </>
   );
 }
