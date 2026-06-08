@@ -282,6 +282,32 @@ function App() {
             </div>
 
             <div className="project">
+              <video
+                className="project-video project-img"
+                src="/img/Data Lens demo.mov"
+                controls
+                preload="auto"
+              />
+              <div className="project-desc-section">
+                <a href="https://idle-fire.aokspace.com" className="project-title" target="blank">
+                  <h4>Data Lens</h4>
+                </a>
+                Human Computer Interaction class project
+                <div>
+                  <p>
+                    Course project to help skeptical users
+                  </p>
+
+                  <p>
+                    Coded in Reactjs and Typescript and uses React's useReducer to
+                    follow the Redux design pattern. A factory design pattern is used for managing
+                    the game's upgrades.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="project">
               <img className="project-img" src="/img/Idle-Fire-Trailer-optimize.gif" />
               <div className="project-desc-section">
                 <a href="https://idle-fire.aokspace.com" className="project-title" target="blank">
