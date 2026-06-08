@@ -295,13 +295,11 @@ function App() {
                 Human Computer Interaction class project
                 <div>
                   <p>
-                    Course project to help skeptical users
+                    Course project to help people skeptical of information to analysis and understand public dataset of information with an AI assistant
                   </p>
 
                   <p>
-                    Coded in Reactjs and Typescript and uses React's useReducer to
-                    follow the Redux design pattern. A factory design pattern is used for managing
-                    the game's upgrades.
+                    
                   </p>
                 </div>
               </div>
