@@ -172,7 +172,7 @@ function App() {
       <section id="hero-section">
         <div className="hero-content">
           <div className="container hero">
-            <img className="hero-img" src="/img/knight_adrian.jpg" />
+            <img className="hero-img" src="/img/Knight_Adrian high_comp.jpg" />
             <h1>Adrian O. Knight</h1>
             <h6>More than an A.O.K. developer</h6>
           </div>
