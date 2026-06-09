@@ -268,13 +268,13 @@ function App() {
           <div className="projects">
 
             <div className="project">
-              <img className="project-img" src="/img/acm-jukebox.png" />
+              <img className="project-img" src="/img/tongue-tracker-home.png" />
               <div className="project-desc-section">
                 <h4>WTSE Tongue Trackpad Interface</h4>
                 <h6>UIC Masters Thesis</h6>
-                <p>A </p>
+                
                 <div className="project-desc">
-                  <p></p>
+                  <p>A web interface for bluetooth connected biomedical tongue trackpad device used for tongue rehabilitation</p>
 
                   <p>Development across vanialla HTML and JS to React and TypeScript</p>
                 </div>
