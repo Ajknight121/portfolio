@@ -289,9 +289,7 @@ function App() {
                 preload="auto"
               />
               <div className="project-desc-section">
-                <a href="https://idle-fire.aokspace.com" className="project-title" target="blank">
                   <h4>Data Lens</h4>
-                </a>
                 Human Computer Interaction class project
                 <div>
                   <p>
