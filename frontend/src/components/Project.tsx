@@ -1,6 +1,5 @@
 
 export default function Project() {
-  const {title, subTitle, desc, media}
   return (
     <div className="project">
       <img className="project-img" src="/img/SanctuaryOS-trailer-optimize.gif" />
