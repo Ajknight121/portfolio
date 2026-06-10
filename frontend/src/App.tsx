@@ -439,6 +439,26 @@ function App() {
                 </div>
               </div>
             </div>
+            
+            <div className="project">
+              <img className="project-img" src="/img/User Affinity Diagram.png" />
+              <div className="project-desc-section">
+                <a href="https://idle-fire.aokspace.com" className="project-title" target="blank">
+                  <h4>Supperlust</h4>
+                </a>
+                Resturant leftovers ordering app
+                <div>
+                  <p>
+                    Working from the Too Good To Go's idea we designed our app to assist finacially-conscious young adults aquire low-cost meals in as little time and distance as possible while reducing their own food waste at home.
+                  </p>
+
+                  <p>
+                    A collaborative design doc, user research, wireframes, figma prototoypes, and React implementation
+                  </p>
+                  <p>A Human Computer Interaction course project</p>
+                </div>
+              </div>
+            </div>
 
             <div className="project">
               <img className="project-img" src="/img/space-exploration.PNG" />
