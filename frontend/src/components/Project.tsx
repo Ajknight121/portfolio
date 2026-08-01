@@ -1,8 +1,9 @@
 
+import LazyImage from "./LazyImage";
 export default function Project() {
   return (
     <div className="project">
-      <img className="project-img" src="/img/SanctuaryOS-trailer-optimize.gif" />
+      <LazyImage className="project-img" src="/img/SanctuaryOS-trailer-optimize.gif" />
       <div className="project-desc">
         <a href="https://sanctuaryoslive.aokspace.com" className="project-title" target="blank">
           <h4>SanctuaryOS Recreation</h4>
